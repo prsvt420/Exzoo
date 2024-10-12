@@ -25,6 +25,8 @@ INSTALLED_APPS: list[str] = [
     'django.contrib.staticfiles',
     'rest_framework',
     'corsheaders',
+
+    'products',
 ]
 
 MIDDLEWARE: list[str] = [
