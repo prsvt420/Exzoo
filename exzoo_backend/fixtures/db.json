@@ -1,0 +1,1324 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2024-10-12T12:31:17.422Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Манго",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2024-10-12T12:31:58.921Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Манго красный гигант",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2024-10-12T12:32:42.125Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Манго красный гигант",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Quantity\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2024-10-13T04:26:17.593Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Манго красный гигант",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2024-10-13T04:28:00.331Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "Ананас",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2024-10-13T04:28:04.753Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "Арбуз",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2024-10-13T04:28:11.359Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "Джекфрут",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2024-10-13T04:28:16.761Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "5",
+    "object_repr": "Карамбола",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2024-10-13T04:28:23.453Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "6",
+    "object_repr": "Кокос",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2024-10-13T04:28:30.672Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "7",
+    "object_repr": "Маракуйя",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2024-10-13T04:28:35.632Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "8",
+    "object_repr": "Папайя",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2024-10-13T04:28:39.122Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "9",
+    "object_repr": "Питахайя",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2024-10-13T04:28:42.866Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "10",
+    "object_repr": "Помело",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2024-10-13T04:28:46.481Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "11",
+    "object_repr": "Фейхоа",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2024-10-13T04:31:01.647Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Ананас пхукет Мини",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2024-10-13T04:32:50.176Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Ананас пхукет",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2024-10-13T04:33:42.655Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "Ананас сирача",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2024-10-13T04:34:53.009Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "Натуральный сушеный ананас",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2024-10-13T04:36:27.976Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "6",
+    "object_repr": "Таиландский красный арбуз",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2024-10-13T04:37:24.523Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "7",
+    "object_repr": "Таиландский желтый арбуз",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2024-10-13T04:41:32.367Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "8",
+    "object_repr": "Джекфрут",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2024-10-13T04:43:25.558Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "9",
+    "object_repr": "Джекфрут очищенный",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2024-10-13T04:46:24.678Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "10",
+    "object_repr": "Фейхоа колумбия",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2024-10-13T04:47:28.269Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "12",
+    "object_repr": "Дуриан",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2024-10-13T04:47:54.283Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "11",
+    "object_repr": "Дуриан",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2024-10-13T04:48:40.547Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "12",
+    "object_repr": "Фейхоа абхазия",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2024-10-13T04:49:41.395Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "13",
+    "object_repr": "Фейхоа сезонное",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2024-10-13T04:51:15.288Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "14",
+    "object_repr": "Помело белое",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2024-10-13T04:53:05.229Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "15",
+    "object_repr": "Помело красное",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2024-10-13T04:53:48.321Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "15",
+    "object_repr": "Помело красное",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2024-10-13T04:54:45.660Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "16",
+    "object_repr": "Помело тайское",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2024-10-13T04:56:02.681Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "17",
+    "object_repr": "Питахайя красная",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2024-10-13T04:58:17.477Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "18",
+    "object_repr": "Папайя бразилия",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2024-10-13T04:58:51.923Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "19",
+    "object_repr": "Папайя таиланд",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2024-10-13T05:00:00.871Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "20",
+    "object_repr": "Папайя вьетнамская",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2024-10-13T05:13:51.511Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "17",
+    "object_repr": "Питахайя красная",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Discount price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2024-10-13T05:22:36.072Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "17",
+    "object_repr": "Питахайя красная",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Discount price\"]}}]"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 4,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 4,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 4,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 4,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 5,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 5,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 5,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 5,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 6,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 6,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 6,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 6,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add product",
+    "content_type": 7,
+    "codename": "add_product"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change product",
+    "content_type": 7,
+    "codename": "change_product"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete product",
+    "content_type": 7,
+    "codename": "delete_product"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view product",
+    "content_type": 7,
+    "codename": "view_product"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add category",
+    "content_type": 8,
+    "codename": "add_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change category",
+    "content_type": 8,
+    "codename": "change_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete category",
+    "content_type": 8,
+    "codename": "delete_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view category",
+    "content_type": 8,
+    "codename": "view_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add tag",
+    "content_type": 9,
+    "codename": "add_tag"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change tag",
+    "content_type": 9,
+    "codename": "change_tag"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete tag",
+    "content_type": 9,
+    "codename": "delete_tag"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view tag",
+    "content_type": 9,
+    "codename": "view_tag"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$lv6ZVBhl18oGbevJ5N21RR$bXzYWAYLZueIouhK5za6OtZ9Jnr0bzzR16loZCJ9z+M=",
+    "last_login": "2024-10-12T12:31:09.927Z",
+    "is_superuser": true,
+    "username": "root",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2024-10-12T12:30:53.899Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "products",
+    "model": "product"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "products",
+    "model": "category"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "products",
+    "model": "tag"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "l3pr1pggegrumsw45ufuozil5yn0qsrf",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2pCWMgN16d4zkBkGpGpoUtqV8e7apAvd_vfef6lA21rC1tISJlFn1avT78YUH6nuQO5Ub7OOc12XifWu6IM2fZ0lPS-H-3dQqJVvzRIBwXe2Z8CBXTY5CXF2kMjZ6IXzCAzeGxxhAOdQCFKUDpGNFVHvD_rUOHk:1szbH3:f8xdZauKYsogmHnPQZV6LAPdBnLATwo79SVLP3XNKg8",
+    "expire_date": "2024-10-26T12:31:09.928Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 2,
+  "fields": {
+    "name": "Ананас пхукет Мини",
+    "slug": "ananas-phuket-mini",
+    "description": "Уникальные и редкие плоды, которые подарят сочный, живительный, сладчайший вкус и улыбку на лице. Маленькие плоды – самые сахарные из всех сортов и не содержать ни одной нотки горечи. Спешите насладиться!",
+    "image": "products/изображение_2024-10-13_123100850.png",
+    "country_of_origin": "Таиланд",
+    "price": "820.00",
+    "discount_price": "0.00",
+    "unit": "PC",
+    "quantity": 10,
+    "category": 2,
+    "tags": []
+  }
+},
+{
+  "model": "products.product",
+  "pk": 3,
+  "fields": {
+    "name": "Ананас пхукет",
+    "slug": "ananas-phuket",
+    "description": "Настоящий таиландский ананас, выращенный на Пхукете -  это истинное удовольствие для гурмана! Вкус незабываемый, уносящий в теплые, жаркие края на мгновение.",
+    "image": "products/изображение_2024-10-13_123227729.png",
+    "country_of_origin": "Таиланд",
+    "price": "1490.00",
+    "discount_price": "0.00",
+    "unit": "PC",
+    "quantity": 33,
+    "category": 2,
+    "tags": []
+  }
+},
+{
+  "model": "products.product",
+  "pk": 4,
+  "fields": {
+    "name": "Ананас сирача",
+    "slug": "ananas-siracha",
+    "description": "Очень сладкий, вкусный, сочный – самый-самый лучший из всех плодов на свете.",
+    "image": "products/изображение_2024-10-13_123332140.png",
+    "country_of_origin": "Таиланд",
+    "price": "990.00",
+    "discount_price": "0.00",
+    "unit": "PC",
+    "quantity": 15,
+    "category": 2,
+    "tags": []
+  }
+},
+{
+  "model": "products.product",
+  "pk": 5,
+  "fields": {
+    "name": "Натуральный сушеный ананас",
+    "slug": "naturalnyj-sushenyj-ananas",
+    "description": "Высушивается в естественных, тропических условиях, поэтому не вымачивается ни в сахаре, ни в глюкозном сиропе. Настоящее чудо и прекрасное лакомство вместе с чашечкой чая или кофе.",
+    "image": "products/изображение_2024-10-13_123451808.png",
+    "country_of_origin": "Таиланд",
+    "price": "1449.00",
+    "discount_price": "0.00",
+    "unit": "KG",
+    "quantity": 55,
+    "category": 2,
+    "tags": []
+  }
+},
+{
+  "model": "products.product",
+  "pk": 6,
+  "fields": {
+    "name": "Таиландский красный арбуз",
+    "slug": "tailandskij-krasnyj-arbuz",
+    "description": "Тайский красный арбуз намного слаще, чем другие. Это сочные, хрустящие и тающие во рту вкусные ягоды.",
+    "image": "products/изображение_2024-10-13_123528263.png",
+    "country_of_origin": "Таиланд",
+    "price": "1190.00",
+    "discount_price": "0.00",
+    "unit": "KG",
+    "quantity": 13,
+    "category": 3,
+    "tags": []
+  }
+},
+{
+  "model": "products.product",
+  "pk": 7,
+  "fields": {
+    "name": "Таиландский желтый арбуз",
+    "slug": "tailandskij-zheltyj-arbuz",
+    "description": "По вкусу желтые арбузы несколько отличны от алых ягод, некоторые попробовавшие экзотическое лакомство отмечают характерный сладкий вкус, которого нет ни в каком другом плоде.",
+    "image": "products/изображение_2024-10-13_123652196.png",
+    "country_of_origin": "Таиланд",
+    "price": "990.00",
+    "discount_price": "0.00",
+    "unit": "KG",
+    "quantity": 22,
+    "category": 3,
+    "tags": []
+  }
+},
+{
+  "model": "products.product",
+  "pk": 8,
+  "fields": {
+    "name": "Джекфрут",
+    "slug": "dzhekfrut",
+    "description": "Аромат джекфрута, который можно купить круглый год в Таиланде, напоминает жевательную резинку с детства. Мякоть по текстуре разная: резиновая, тягучая, хрустящая, крахмальная или как мясо. Зрелый фрукты очень насыщенные, вкусные, ничем не хуже дуриана и чемпедака.",
+    "image": "products/изображение_2024-10-13_124117831.png",
+    "country_of_origin": "Таиланд",
+    "price": "1990.00",
+    "discount_price": "0.00",
+    "unit": "KG",
+    "quantity": 4,
+    "category": 4,
+    "tags": []
+  }
+},
+{
+  "model": "products.product",
+  "pk": 9,
+  "fields": {
+    "name": "Джекфрут очищенный",
+    "slug": "dzhekfrut-ochishennyj",
+    "description": "Обычно полностью распробовать вкус удается не с первого, а с третьего раза. Запах банана и ананаса привлекает и манит, а вот кожица отталкивает ароматом ацетона. Поэтому лучше купить джекфрут очищенный и насладиться им вдоволь.",
+    "image": "products/изображение_2024-10-13_124322969.png",
+    "country_of_origin": "Таиланд",
+    "price": "2950.00",
+    "discount_price": "0.00",
+    "unit": "KG",
+    "quantity": 31,
+    "category": 4,
+    "tags": []
+  }
+},
+{
+  "model": "products.product",
+  "pk": 10,
+  "fields": {
+    "name": "Фейхоа колумбия",
+    "slug": "fejhoa-kolumbiya",
+    "description": "Большая часть всех питательных веществ находится именно в кожуре, поэтому, при желании, ее можно высушить и после добавлять в чай, как ароматизатор.",
+    "image": "products/изображение_2024-10-13_124624093.png",
+    "country_of_origin": "Колумбия",
+    "price": "2450.00",
+    "discount_price": "0.00",
+    "unit": "KG",
+    "quantity": 29,
+    "category": 11,
+    "tags": []
+  }
+},
+{
+  "model": "products.product",
+  "pk": 11,
+  "fields": {
+    "name": "Дуриан",
+    "slug": "durian",
+    "description": "Чем-то они напомнят футбольный мяч, вот только бить в него не стоит. Длина – до 30 см, а диаметр – до 25. Однако в основном весь вес уходит на кожуру, мякоти – не так много. Тайцы считают, что этот интересный продукт принесет адские видения и райское наслаждение каждому, кто его попробует.",
+    "image": "products/изображение_2024-10-13_124746212.png",
+    "country_of_origin": "Вьетнам",
+    "price": "2490.00",
+    "discount_price": "0.00",
+    "unit": "KG",
+    "quantity": 56,
+    "category": 12,
+    "tags": []
+  }
+},
+{
+  "model": "products.product",
+  "pk": 12,
+  "fields": {
+    "name": "Фейхоа абхазия",
+    "slug": "fejhoa-abhaziya",
+    "description": "Мякоть должна быть золотисто-прозрачной, если она коричневая – этот фрукт перезрел, а зеленая – не дозрел. Содержит в себе большое количество витаминов С и В, обладает ароматом клубники и ананаса.",
+    "image": "products/изображение_2024-10-13_124820497.png",
+    "country_of_origin": "Абхазия",
+    "price": "1110.00",
+    "discount_price": "0.00",
+    "unit": "KG",
+    "quantity": 34,
+    "category": 11,
+    "tags": []
+  }
+},
+{
+  "model": "products.product",
+  "pk": 13,
+  "fields": {
+    "name": "Фейхоа сезонное",
+    "slug": "fejhoa-sezonnoe",
+    "description": "Мякоть должна быть золотисто-прозрачной, если она коричневая – этот фрукт перезрел, а зеленая – не дозрел. Содержит в себе большое количество витаминов С и В, обладает ароматом клубники и ананаса.",
+    "image": "products/изображение_2024-10-13_124936420.png",
+    "country_of_origin": "Абхазия",
+    "price": "570.00",
+    "discount_price": "0.00",
+    "unit": "KG",
+    "quantity": 32,
+    "category": 11,
+    "tags": []
+  }
+},
+{
+  "model": "products.product",
+  "pk": 14,
+  "fields": {
+    "name": "Помело белое",
+    "slug": "pomelo-beloe",
+    "description": "Бывает с розовой, белой (желтой) и красной мякотью. Самым терпким будут образцы с красной «начинкой», которая к тому же еще и горчит, а вот розовый и белый сорта сочные, сладкие и большие по размерам.",
+    "image": "products/изображение_2024-10-13_125110814.png",
+    "country_of_origin": "Китай",
+    "price": "390.00",
+    "discount_price": "0.00",
+    "unit": "KG",
+    "quantity": 32,
+    "category": 10,
+    "tags": []
+  }
+},
+{
+  "model": "products.product",
+  "pk": 15,
+  "fields": {
+    "name": "Помело красное",
+    "slug": "pomelo-krasnoe",
+    "description": "Мякоть кораллового цвета, сочная, сладкая, с небольшой кислинкой. По вкусу немного напоминает грейпфрут, но без характерной горечи. У красного помело толстая шкурка, но она ощутимо тоньше, чем у белого. Дольки покрыты кожицей, которая легко отделяется.",
+    "image": "products/изображение_2024-10-13_125304017.png",
+    "country_of_origin": "Китай",
+    "price": "390.00",
+    "discount_price": "0.00",
+    "unit": "KG",
+    "quantity": 13,
+    "category": 10,
+    "tags": []
+  }
+},
+{
+  "model": "products.product",
+  "pk": 16,
+  "fields": {
+    "name": "Помело тайское",
+    "slug": "pomelo-tajskoe",
+    "description": "Невероятный насыщенный вкус очень гармонирует со жгучей приправой. Кожуру не выбрасывают, а просушивают и после засахаривают. Вкус отличается отсутствием горечи грейпфрута, сочностью и освежающим эффектом впоследствии.",
+    "image": "products/изображение_2024-10-13_125435727.png",
+    "country_of_origin": "Таиланд",
+    "price": "1390.00",
+    "discount_price": "0.00",
+    "unit": "PC",
+    "quantity": 32,
+    "category": 10,
+    "tags": []
+  }
+},
+{
+  "model": "products.product",
+  "pk": 17,
+  "fields": {
+    "name": "Питахайя красная",
+    "slug": "pitahajya-krasnaya",
+    "description": "Розовая кожица, красная или розовая мякоть — это так называемая красная питахайя, растущая на кактусе гилоцереус многоризус (Hylocereus polyrhizus), часто более крупная и сладкая, чем предыдущий сорт.",
+    "image": "products/изображение_2024-10-13_125523635.png",
+    "country_of_origin": "Таиланд",
+    "price": "1490.00",
+    "discount_price": "0.00",
+    "unit": "KG",
+    "quantity": 60,
+    "category": 9,
+    "tags": []
+  }
+},
+{
+  "model": "products.product",
+  "pk": 18,
+  "fields": {
+    "name": "Папайя бразилия",
+    "slug": "papajya-braziliya",
+    "description": "Местные жители едят ее в основном на завтрак ввиду папаина в составе. Для них это равносильно нашей геркулесовой каше с утра. Если плод не дозрел, то он лежит несколько дней для полной созревания, а вот зрелый продукт нужно есть сразу. Выделяются два вида: более крупный – освежающий, мелкий – сладкий.",
+    "image": "products/изображение_2024-10-13_125757135.png",
+    "country_of_origin": "Бразилия",
+    "price": "1490.00",
+    "discount_price": "0.00",
+    "unit": "KG",
+    "quantity": 13,
+    "category": 8,
+    "tags": []
+  }
+},
+{
+  "model": "products.product",
+  "pk": 19,
+  "fields": {
+    "name": "Папайя таиланд",
+    "slug": "papajya-tailand",
+    "description": "Тайцы считают ее одним из самых лучших видов в мире со вкусом арбуза, шоколада, клубники и кофе в одном фрукте. Кожура, к слову, тоже съедобна при полной зрелости, употребляется в пищу. Также есть гавайская папайя: божественно вкусные, крохотные и мягкая, напоминает жвачку с детства, зеленая вытянутая, оранжевая продолговатая, «пухлая» «Red Lady», где мякоть по цвету схожа с рыбой семгой – очень специфическая, искусственно выведенная.",
+    "image": "products/изображение_2024-10-13_125849562.png",
+    "country_of_origin": "Таиланд",
+    "price": "1690.00",
+    "discount_price": "0.00",
+    "unit": "KG",
+    "quantity": 11,
+    "category": 8,
+    "tags": []
+  }
+},
+{
+  "model": "products.product",
+  "pk": 20,
+  "fields": {
+    "name": "Папайя вьетнамская",
+    "slug": "papajya-vetnamskaya",
+    "description": "Этот сорт папайи отличает восхитительный аромат и сочность. Мякоть имеет приятный, сладкий вкус и легкое дынное послевкусие.",
+    "image": "products/изображение_2024-10-13_125959977.png",
+    "country_of_origin": "Вьетнам",
+    "price": "1690.00",
+    "discount_price": "0.00",
+    "unit": "KG",
+    "quantity": 16,
+    "category": 8,
+    "tags": []
+  }
+},
+{
+  "model": "products.category",
+  "pk": 1,
+  "fields": {
+    "name": "Манго",
+    "slug": "mango"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 2,
+  "fields": {
+    "name": "Ананас",
+    "slug": "ananas"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 3,
+  "fields": {
+    "name": "Арбуз",
+    "slug": "arbuz"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 4,
+  "fields": {
+    "name": "Джекфрут",
+    "slug": "dzhekfrut"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 5,
+  "fields": {
+    "name": "Карамбола",
+    "slug": "karambola"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 6,
+  "fields": {
+    "name": "Кокос",
+    "slug": "kokos"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 7,
+  "fields": {
+    "name": "Маракуйя",
+    "slug": "marakujya"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 8,
+  "fields": {
+    "name": "Папайя",
+    "slug": "papajya"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 9,
+  "fields": {
+    "name": "Питахайя",
+    "slug": "pitahajya"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 10,
+  "fields": {
+    "name": "Помело",
+    "slug": "pomelo"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 11,
+  "fields": {
+    "name": "Фейхоа",
+    "slug": "fejhoa"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 12,
+  "fields": {
+    "name": "Дуриан",
+    "slug": "durian"
+  }
+}
+]

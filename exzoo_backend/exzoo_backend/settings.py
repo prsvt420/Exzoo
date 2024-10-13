@@ -99,4 +99,8 @@ STATIC_URL: str = 'static/'
 MEDIA_URL: str = 'media/'
 MEDIA_ROOT: Path = BASE_DIR / 'media'
 
+FIXTURE_DIRS = [
+    'fixtures',
+]
+
 DEFAULT_AUTO_FIELD: str = 'django.db.models.BigAutoField'

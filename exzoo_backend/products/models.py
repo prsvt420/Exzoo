@@ -1,10 +1,12 @@
 from decimal import Decimal
+from typing import Optional
 
 from django.db import models
-from django.urls import reverse
 
 
 class Product(models.Model):
+    objects: Optional[models.Manager] = None
+
     class Unit(models.TextChoices):
         KILOGRAM = 'KG', 'kilogram'
         PIECE = 'PC', 'piece'
@@ -32,17 +34,19 @@ class Product(models.Model):
         return self.name
 
     def get_price(self) -> Decimal:
-        """Return price of the product"""
+        """
+        Return price of the product
+
+        Returns:
+            Decimal: Price of the product including discount
+        """
         if self.discount_price:
             return round(self.price - self.price * self.discount_price / 100, 2)
         return self.price
 
-    def get_absolute_url(self) -> str:
-        """Return absolute url of the product"""
-        return reverse(..., kwargs={'slug': self.slug})
-
 
 class Category(models.Model):
+    objects: Optional[models.Manager] = None
     name: str = models.CharField(max_length=100)
     slug: str = models.SlugField(max_length=100)
 
@@ -56,12 +60,9 @@ class Category(models.Model):
         """Return name of the category"""
         return self.name
 
-    def get_absolute_url(self) -> str:
-        """Return absolute url of the category"""
-        return reverse(..., kwargs={'slug': self.slug})
-
 
 class Tag(models.Model):
+    objects: Optional[models.Manager] = None
     name: str = models.CharField(max_length=100)
     slug: str = models.SlugField(max_length=100)
 
