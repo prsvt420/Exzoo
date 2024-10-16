@@ -33,7 +33,7 @@ class ProductSerializer(ModelSerializer):
             'image',
             'country_of_origin',
             'price',
-            'discount_price',
+            'discount',
             'unit',
             'quantity',
             'category',

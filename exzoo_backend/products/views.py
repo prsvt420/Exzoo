@@ -15,7 +15,7 @@ class ProductViewSet(viewsets.ReadOnlyModelViewSet):
 
     serializer_class: ProductSerializer = ProductSerializer
     pagination_class: ProductPagination = ProductPagination
-    lookup_field = 'slug'
+    lookup_field: str = 'slug'
 
     def get_queryset(self, *args, **kwargs) -> QuerySet[Product]:
         """

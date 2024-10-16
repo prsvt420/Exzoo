@@ -16,16 +16,16 @@ class ProductAdmin(BaseAdmin):
     fields: tuple = (
         ('name', 'slug'),
         ('description', 'country_of_origin'),
-        ('price', 'unit', 'discount_price',),
+        ('price', 'unit', 'discount',),
         ('category', 'tags'),
         'image',
         'quantity',
     )
-    list_display = ('name', 'price', 'discount_price', 'category', 'unit', 'quantity')
+    list_display: tuple = ('name', 'price', 'discount', 'category', 'unit', 'quantity')
     search_fields: tuple = ('name', 'description', 'country_of_origin')
     list_filter: tuple = ('category', 'tags')
     filter_horizontal: tuple = ('tags',)
-    list_editable: tuple = ('price', 'discount_price', 'unit', 'quantity')
+    list_editable: tuple = ('price', 'discount', 'unit', 'quantity')
 
 
 @admin.register(Category)

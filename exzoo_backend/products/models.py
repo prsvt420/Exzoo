@@ -8,8 +8,8 @@ class Product(models.Model):
     objects: Optional[models.Manager] = None
 
     class Unit(models.TextChoices):
-        KILOGRAM = 'KG', 'kilogram'
-        PIECE = 'PC', 'piece'
+        KILOGRAM: tuple = 'KG', 'kilogram'
+        PIECE: tuple = 'PC', 'piece'
 
     name: str = models.CharField(max_length=100)
     slug: str = models.SlugField(max_length=100)
@@ -17,9 +17,9 @@ class Product(models.Model):
     image: str = models.ImageField(upload_to='products', max_length=100)
     country_of_origin: str = models.CharField(max_length=100)
     price: Decimal = models.DecimalField(max_digits=8, decimal_places=2)
-    discount_price: Decimal = models.DecimalField(default=0.00, max_digits=7, decimal_places=2)
+    discount: Decimal = models.DecimalField(default=0.00, max_digits=7, decimal_places=2)
     unit: models.CharField = models.CharField(max_length=2, choices=Unit)
-    quantity = models.PositiveIntegerField(default=0)
+    quantity: int = models.PositiveIntegerField(default=0)
     category: models.ForeignKey = models.ForeignKey(to='Category', on_delete=models.CASCADE)
     tags: models.ManyToManyField = models.ManyToManyField(to='Tag', blank=True)
 
@@ -28,6 +28,7 @@ class Product(models.Model):
         db_table_comment: str = 'The table contains products'
         verbose_name_plural: str = 'products'
         verbose_name: str = 'product'
+        ordering: tuple[str] = ('id',)
 
     def __str__(self) -> str:
         """Return name of the product"""
@@ -40,8 +41,8 @@ class Product(models.Model):
         Returns:
             Decimal: Price of the product including discount
         """
-        if self.discount_price:
-            return round(self.price - self.price * self.discount_price / 100, 2)
+        if self.discount:
+            return round(self.price - self.price * self.discount / 100, 2)
         return self.price
 
 

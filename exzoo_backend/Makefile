@@ -10,3 +10,5 @@ dumpdata:
 	poetry run python -Xutf8 manage.py dumpdata --indent=2 -o fixtures/db.json
 loaddata:
 	poetry run python -Xutf8 manage.py loaddata fixtures/db.json
+tests:
+	poetry run python manage.py test .
