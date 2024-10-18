@@ -28,7 +28,7 @@ class ProductViewSet(viewsets.ReadOnlyModelViewSet):
         tags: Optional[list[str]] = self.request.query_params.getlist('tag')
         category_slug: Optional[str] = self.request.query_params.get('category')
 
-        queryset: QuerySet[Product] = Product.objects.all()
+        queryset: QuerySet[Product] = Product.objects.select_related('category').prefetch_related('tags').all()
 
         if tags:
             queryset = queryset.filter(tags__slug__in=tags)
