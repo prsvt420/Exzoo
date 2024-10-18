@@ -7,7 +7,7 @@ class SpecialUserSerializer(serializers.ModelSerializer):
     class Meta:
 
         model = get_user_model()
-        exclude: list[str] = [
+        exclude: tuple = (
             'is_active',
             'is_staff',
             'is_superuser',
@@ -15,5 +15,5 @@ class SpecialUserSerializer(serializers.ModelSerializer):
             'groups',
             'password',
             'last_login'
-        ]
-        read_only_fields: list[str] = ['is_active', 'is_staff', 'is_superuser']
+        )
+        read_only_fields: tuple = ('is_active', 'is_staff', 'is_superuser')

@@ -31,6 +31,7 @@ INSTALLED_APPS: list[str] = [
     'djoser',
     'corsheaders',
     'debug_toolbar',
+    'django_filters',
 
     'products',
     'users',
@@ -107,7 +108,7 @@ STATIC_URL: str = 'static/'
 MEDIA_URL: str = 'media/'
 MEDIA_ROOT: Path = BASE_DIR / 'media'
 
-FIXTURE_DIRS = [
+FIXTURE_DIRS: list = [
     'fixtures',
 ]
 
@@ -118,6 +119,7 @@ REST_FRAMEWORK: dict = {
         'rest_framework.authentication.TokenAuthentication',
         'rest_framework.authentication.SessionAuthentication',
     ),
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
 }
 
 DJOSER: dict = {

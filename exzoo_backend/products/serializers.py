@@ -21,11 +21,10 @@ class ProductSerializer(ModelSerializer):
     category: CategorySerializer = CategorySerializer(read_only=True)
     tags: TagSerializer = TagSerializer(many=True, read_only=True)
     price: Decimal = serializers.SerializerMethodField()
-    lookup_field = 'slug'
 
     class Meta:
         model: Product = Product
-        fields: list[str] = [
+        fields: tuple = (
             'id',
             'name',
             'slug',
@@ -38,7 +37,7 @@ class ProductSerializer(ModelSerializer):
             'quantity',
             'category',
             'tags'
-        ]
+        )
 
     @staticmethod
     def get_price(obj: Product) -> Decimal:

@@ -5,6 +5,7 @@ from rest_framework.response import Response
 from rest_framework.test import APITestCase
 
 from products.models import Product, Category
+from products.utils import ProductFilter
 
 
 class ProductTests(APITestCase):
@@ -15,6 +16,7 @@ class ProductTests(APITestCase):
 
         products: list[Product] = [
             Product(
+                pk=1,
                 name='Фейхоа колумбия',
                 slug='fejhoa-kolumbiya',
                 description='Большая часть всех питательных веществ находится именно в кожуре, поэтому, при желании,'
@@ -28,6 +30,7 @@ class ProductTests(APITestCase):
                 category=Category.objects.get(slug='fejhoa')
             ),
             Product(
+                pk=2,
                 name='Таиландский красный арбуз',
                 slug='tailandskij-krasnyj-arbuz',
                 description='Тайский красный арбуз намного слаще, чем другие. Это сочные, хрустящие и тающие во '
@@ -53,8 +56,7 @@ class ProductTests(APITestCase):
         self.assertEqual(first=response.data['count'], second=2)
 
     def test_products_detail(self) -> None:
-        url: str = reverse(viewname='products:products-detail', kwargs={'slug': 'fejhoa-kolumbiya'})
-
+        url: str = reverse(viewname='products:products-detail', kwargs={'pk': 1})
         response: Response = self.client.get(path=url)
 
         self.assertEqual(first=response.status_code, second=status.HTTP_200_OK)
@@ -64,7 +66,7 @@ class ProductTests(APITestCase):
         self.assertEqual(first=response.data['category']['name'], second='Фейхоа')
 
     def test_product_price(self) -> None:
-        url: str = reverse(viewname='products:products-detail', kwargs={'slug': 'fejhoa-kolumbiya'})
+        url: str = reverse(viewname='products:products-detail', kwargs={'pk': 1})
 
         response: Response = self.client.get(path=url)
 
@@ -78,9 +80,10 @@ class ProductTests(APITestCase):
         self.assertEqual(first=response.data['price'], second=2205.00)
 
     def test_filter_products_by_category(self) -> None:
-        url: str = reverse(viewname='products:products-list')
+        filter_data: dict = {
+            'category': 'fejhoa',
+        }
 
-        response: Response = self.client.get(path=url, data={'category': 'fejhoa'})
+        filter_: ProductFilter = ProductFilter(data=filter_data)
 
-        self.assertEqual(first=response.status_code, second=status.HTTP_200_OK)
-        self.assertEqual(first=response.data['count'], second=1)
+        self.assertEqual(first=filter_.qs.count(), second=1)
