@@ -124,7 +124,7 @@ REST_FRAMEWORK: dict = {
 
 DJOSER: dict = {
     'SERIALIZERS': {
-        'user': 'users.serializers.SpecialUserSerializer',
-        'current_user': 'users.serializers.SpecialUserSerializer',
+        'user': 'users.serializers.UserSerializer',
+        'current_user': 'users.serializers.UserSerializer',
     },
 }
