@@ -5,11 +5,12 @@ from rest_framework.response import Response
 from rest_framework.test import APITestCase
 
 from products.models import Product, Category
-from products.utils import ProductFilter
+from products.filters import ProductFilter
 
 
 class ProductTests(APITestCase):
     def setUp(self) -> None:
+        """Setup for tests"""
         categories: list[Category] = [Category(name='Фейхоа', slug='fejhoa'), Category(name='Арбуз', slug='arbuz')]
 
         Category.objects.bulk_create(categories)
@@ -48,7 +49,8 @@ class ProductTests(APITestCase):
         Product.objects.bulk_create(products)
 
     def test_products_list(self) -> None:
-        url: str = reverse(viewname='products:products-list')
+        """Test for products list endpoint"""
+        url: str = reverse(viewname='products-list')
 
         response: Response = self.client.get(path=url)
 
@@ -56,7 +58,8 @@ class ProductTests(APITestCase):
         self.assertEqual(first=response.data['count'], second=2)
 
     def test_products_detail(self) -> None:
-        url: str = reverse(viewname='products:products-detail', kwargs={'pk': 1})
+        """Test for product detail endpoint"""
+        url: str = reverse(viewname='products-detail', kwargs={'pk': 1})
         response: Response = self.client.get(path=url)
 
         self.assertEqual(first=response.status_code, second=status.HTTP_200_OK)
@@ -66,7 +69,8 @@ class ProductTests(APITestCase):
         self.assertEqual(first=response.data['category']['name'], second='Фейхоа')
 
     def test_product_price(self) -> None:
-        url: str = reverse(viewname='products:products-detail', kwargs={'pk': 1})
+        """Test for product price endpoint"""
+        url: str = reverse(viewname='products-detail', kwargs={'pk': 1})
 
         response: Response = self.client.get(path=url)
 
@@ -80,6 +84,7 @@ class ProductTests(APITestCase):
         self.assertEqual(first=response.data['price'], second=2205.00)
 
     def test_filter_products_by_category(self) -> None:
+        """Test for filter products by category"""
         filter_data: dict = {
             'category': 'fejhoa',
         }

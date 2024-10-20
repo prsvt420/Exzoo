@@ -73,8 +73,8 @@ DATABASES: dict = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': os.getenv('DB_NAME'),
-        'USER': os.getenv('DB_ADMIN'),
-        'PASSWORD': os.getenv('DB_PASSWORD'),
+        'USER': os.getenv('DB_USER'),
+        'PASSWORD': os.getenv('DB_USER_PASSWORD'),
         'HOST': 'localhost',
         'PORT': 5432,
     }
@@ -95,7 +95,7 @@ AUTH_PASSWORD_VALIDATORS: list[dict] = [
     },
 ]
 
-LANGUAGE_CODE: str = 'ru-RU'
+LANGUAGE_CODE: str = 'en-EN'
 
 TIME_ZONE: str = 'Europe/Moscow'
 
@@ -122,9 +122,23 @@ REST_FRAMEWORK: dict = {
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
 }
 
+AUTH_USER_MODEL: str = 'users.User'
+EMAIL_HOST: str = 'smtp.gmail.com'
+EMAIL_PORT: int = 587
+EMAIL_USE_TLS: bool = True
+EMAIL_HOST_USER: str = os.getenv('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD: str = os.getenv('EMAIL_HOST_PASSWORD')
+
+DOMAIN: str = os.getenv('DOMAIN')
+SITE_NAME: str = 'Exzoo'
+
 DJOSER: dict = {
+    'SEND_ACTIVATION_EMAIL': True,
+    'SEND_CONFIRMATION_EMAIL': True,
+    'PASSWORD_CHANGE_EMAIL_CONFIRMATION': True,
+    'ACTIVATION_URL': 'account/activation/{uid}/{token}/',
+    'PASSWORD_RESET_CONFIRM_URL': 'account/reset-password/{uid}/{token}/',
     'SERIALIZERS': {
         'user': 'users.serializers.UserSerializer',
-        'current_user': 'users.serializers.UserSerializer',
     },
 }

@@ -1,4 +1,5 @@
 from django.contrib.auth import get_user_model
+from django.contrib.auth.models import User
 from django.urls import reverse
 from rest_framework import status
 from rest_framework.response import Response
@@ -8,7 +9,8 @@ from rest_framework.authtoken.models import Token
 
 class UserTests(APITestCase):
     def setUp(self) -> None:
-        user_model = get_user_model()
+        """Setup for tests"""
+        user_model: User = get_user_model()
 
         self.user: user_model = user_model.objects.create_user(
             username='user',
@@ -19,6 +21,7 @@ class UserTests(APITestCase):
         self.token: Token = Token.objects.create(user=self.user)
 
     def test_user_me(self) -> None:
+        """Test for user me endpoint"""
         self.client.credentials(
             HTTP_AUTHORIZATION=f'Token {self.token.key}'
         )

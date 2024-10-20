@@ -9,6 +9,8 @@ dumpdata:
 	poetry run python -Xutf8 manage.py dumpdata --indent=2 products.Product -o fixtures/product.json
 	poetry run python -Xutf8 manage.py dumpdata --indent=2 -o fixtures/db.json
 loaddata:
-	poetry run python -Xutf8 manage.py loaddata fixtures/db.json
+	poetry run python -Xutf8 manage.py loaddata fixtures/category.json
+	poetry run python -Xutf8 manage.py loaddata fixtures/product.json
+	poetry run python -Xutf8 manage.py loaddata fixtures/tag.json
 tests:
 	poetry run python manage.py test .

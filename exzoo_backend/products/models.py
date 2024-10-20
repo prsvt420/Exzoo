@@ -3,14 +3,11 @@ from typing import Optional
 
 from django.db import models
 
+from products.enums import Unit
+
 
 class Product(models.Model):
     objects: Optional[models.Manager] = None
-
-    class Unit(models.TextChoices):
-        KILOGRAM: tuple = 'KG', 'kilogram'
-        PIECE: tuple = 'PC', 'piece'
-
     name: str = models.CharField(max_length=100)
     slug: str = models.SlugField(max_length=100)
     description: str = models.TextField()
@@ -42,8 +39,8 @@ class Product(models.Model):
             Decimal: Price of the product including discount
         """
         if self.discount:
-            return round(self.price - self.price * self.discount / 100, 2)
-        return self.price
+            return Decimal(round(self.price - self.price * self.discount / 100, 2))
+        return Decimal(self.price)
 
 
 class Category(models.Model):

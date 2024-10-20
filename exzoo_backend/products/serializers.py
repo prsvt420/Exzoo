@@ -13,7 +13,7 @@ class CategorySerializer(ModelSerializer):
 
 class TagSerializer(ModelSerializer):
     class Meta:
-        model: Category = Tag
+        model: Tag = Tag
         fields: str = '__all__'
 
 

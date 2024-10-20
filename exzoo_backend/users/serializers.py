@@ -1,4 +1,5 @@
 from django.contrib.auth import get_user_model
+from django.contrib.auth.models import User
 
 from products import serializers
 
@@ -6,7 +7,7 @@ from products import serializers
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
 
-        model = get_user_model()
+        model: User = get_user_model()
         exclude: tuple = (
             'is_active',
             'is_staff',

@@ -1,28 +1,25 @@
 from django.db.models import QuerySet
 from rest_framework import viewsets
-from rest_framework.pagination import PageNumberPagination
 
+from products.filters import ProductFilter
 from products.models import Category, Product, Tag
+from products.paginations import ProductPagination
 from products.serializers import ProductSerializer, CategorySerializer, TagSerializer
-from products.utils import ProductFilter
+from products.services import ProductService, CategoryService, TagService
 
 
-class ProductViewSet(viewsets.ReadOnlyModelViewSet):
-    class ProductPagination(PageNumberPagination):
-        page_size: int = 4
-        page_query_param: str = 'page'
-
-    queryset: QuerySet[Product] = Product.objects.select_related('category').prefetch_related('tags').all()
+class ProductViewSet(viewsets.ModelViewSet):
+    queryset: QuerySet[Product] = ProductService.get_products()
     serializer_class: ProductSerializer = ProductSerializer
     pagination_class: ProductPagination = ProductPagination
     filterset_class: ProductFilter = ProductFilter
 
 
-class CategoryViewSet(viewsets.ReadOnlyModelViewSet):
-    queryset: QuerySet[Category] = Category.objects.all()
+class CategoryViewSet(viewsets.ModelViewSet):
+    queryset: QuerySet[Category] = CategoryService.get_categories()
     serializer_class: CategorySerializer = CategorySerializer
 
 
-class TagViewSet(viewsets.ReadOnlyModelViewSet):
-    queryset: QuerySet[Tag] = Tag.objects.all()
+class TagViewSet(viewsets.ModelViewSet):
+    queryset: QuerySet[Tag] = TagService.get_tags()
     serializer_class: TagSerializer = TagSerializer
