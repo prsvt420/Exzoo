@@ -15,6 +15,6 @@ class UserSerializer(serializers.ModelSerializer):
             'user_permissions',
             'groups',
             'password',
-            'last_login'
         )
+        ref_name: str = 'CustomDjoserUser Serializer'
         read_only_fields: tuple = ('is_active', 'is_staff', 'is_superuser')

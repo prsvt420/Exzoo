@@ -6,6 +6,7 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
+from .yasg import urlpatterns as yasg_urls
 
 from products.views import *
 
@@ -21,6 +22,8 @@ urlpatterns: List[path] = [
     path('api/auth/', include(arg='djoser.urls')),
     path('api/auth/', include(arg='djoser.urls.authtoken')),
 ]
+
+urlpatterns += yasg_urls
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

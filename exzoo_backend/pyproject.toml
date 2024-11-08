@@ -16,6 +16,7 @@ django-debug-toolbar = "^4.4.6"
 pillow = "^10.4.0"
 djoser = "^2.2.3"
 django-filter = "^24.3"
+drf-yasg = "^1.21.8"
 
 
 [build-system]

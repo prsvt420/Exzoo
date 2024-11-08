@@ -17,6 +17,7 @@ INTERNAL_IPS: list[str] = [
 
 CORS_ALLOWED_ORIGINS: list[str] = [
     'http://localhost:3000',
+    'http://127.0.0.1:8000',
 ]
 
 INSTALLED_APPS: list[str] = [
@@ -32,6 +33,7 @@ INSTALLED_APPS: list[str] = [
     'corsheaders',
     'debug_toolbar',
     'django_filters',
+    'drf_yasg',
 
     'products',
     'users',
@@ -140,5 +142,16 @@ DJOSER: dict = {
     'PASSWORD_RESET_CONFIRM_URL': 'account/reset-password/{uid}/{token}/',
     'SERIALIZERS': {
         'user': 'users.serializers.UserSerializer',
+        'current_user': 'users.serializers.UserSerializer',
     },
+}
+
+SWAGGER_SETTINGS = {
+    'SECURITY_DEFINITIONS': {
+        'Token': {
+            'type': 'apiKey',
+            'name': 'Authorization',
+            'in': 'header'
+        }
+    }
 }
