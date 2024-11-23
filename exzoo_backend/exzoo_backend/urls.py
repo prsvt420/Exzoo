@@ -9,12 +9,14 @@ from rest_framework.routers import DefaultRouter
 from .yasg import urlpatterns as yasg_urls
 
 from products.views import *
+from carts.views import CartViewSet
 
 api_router: DefaultRouter = DefaultRouter()
 
 api_router.register(prefix=r'products', viewset=ProductViewSet, basename='products')
 api_router.register(prefix=r'categories', viewset=CategoryViewSet, basename='categories')
 api_router.register(prefix=r'tags', viewset=TagViewSet, basename='tags')
+api_router.register(prefix=r'carts', viewset=CartViewSet, basename='carts')
 
 urlpatterns: List[path] = [
     path('admin/', admin.site.urls),

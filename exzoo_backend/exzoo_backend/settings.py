@@ -5,7 +5,7 @@ BASE_DIR: Path = Path(__file__).resolve().parent.parent
 
 SECRET_KEY: str = os.getenv('SECRET_KEY')
 
-DEBUG: bool = True
+DEBUG: bool = eval(os.getenv('DEBUG'))
 
 ALLOWED_HOSTS: list[str] = [
     '127.0.0.1',
@@ -37,6 +37,7 @@ INSTALLED_APPS: list[str] = [
 
     'products',
     'users',
+    'carts',
 ]
 
 MIDDLEWARE: list[str] = [
@@ -146,7 +147,7 @@ DJOSER: dict = {
     },
 }
 
-SWAGGER_SETTINGS = {
+SWAGGER_SETTINGS: dict = {
     'SECURITY_DEFINITIONS': {
         'Token': {
             'type': 'apiKey',
