@@ -12,12 +12,14 @@ from users.models import User
 
 
 class CartSerializer(serializers.ModelSerializer):
-    products_price: Decimal = serializers.SerializerMethodField()
-    quantity: int = serializers.IntegerField(min_value=1, required=False)
-    product: int = serializers.PrimaryKeyRelatedField(queryset=ProductService.get_products())
+    products_price: serializers.SerializerMethodField = serializers.SerializerMethodField()
+    quantity: serializers.IntegerField = serializers.IntegerField(min_value=1, required=False)
+    product: serializers.PrimaryKeyRelatedField = serializers.PrimaryKeyRelatedField(
+        queryset=ProductService.get_products()
+    )
 
     class Meta:
-        model: Cart = Cart
+        model: type[Cart] = Cart
         fields: tuple = ('id', 'product', 'quantity', 'products_price')
 
     def validate(self, attrs: dict) -> dict:

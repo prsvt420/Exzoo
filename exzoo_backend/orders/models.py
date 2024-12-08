@@ -2,6 +2,7 @@ from decimal import Decimal
 
 from django.contrib.auth import get_user_model
 from django.db import models
+from django.db.models.expressions import Combinable
 
 from orders.choices import StatusChoices
 from products.models import Product
@@ -9,15 +10,15 @@ from users.models import User
 
 
 class Order(models.Model):
-    user: User = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
+    user: models.ForeignKey[User | Combinable, User] = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
     created_at: models.DateTimeField = models.DateTimeField(auto_now_add=True)
-    status: str = models.CharField(
+    status: models.CharField = models.CharField(
         choices=StatusChoices.choices,
         default=StatusChoices.PROCESSING, max_length=2
     )
-    address: str = models.CharField(max_length=255)
-    is_paid: bool = models.BooleanField(default=False)
-    phone_number: str = models.CharField(max_length=20)
+    address: models.CharField = models.CharField(max_length=255)
+    is_paid: models.BooleanField = models.BooleanField(default=False)
+    phone_number: models.CharField = models.CharField(max_length=20)
 
     class Meta:
         db_table: str = 'orders'
@@ -33,10 +34,10 @@ class Order(models.Model):
 
 
 class OrderItem(models.Model):
-    order: Order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name='items')
-    product: Product = models.ForeignKey(Product, on_delete=models.CASCADE)
-    quantity: int = models.PositiveIntegerField(default=1)
-    price: Decimal = models.DecimalField(max_digits=10, decimal_places=2)
+    order: models.ForeignKey[Order | Combinable, Order] = models.ForeignKey(Order, on_delete=models.CASCADE, related_name='items')
+    product: models.ForeignKey[Product | Combinable, Product] = models.ForeignKey(Product, on_delete=models.CASCADE)
+    quantity: models.PositiveIntegerField = models.PositiveIntegerField(default=1)
+    price: models.DecimalField = models.DecimalField(max_digits=10, decimal_places=2)
 
     class Meta:
         db_table: str = 'order_items'

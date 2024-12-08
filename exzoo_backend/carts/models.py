@@ -2,15 +2,17 @@ from decimal import Decimal
 
 from django.contrib.auth import get_user_model
 from django.db import models
+from django.db.models.expressions import Combinable
 
 from products.models import Product
 from users.models import User
 
 
 class Cart(models.Model):
-    user: User = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
-    product: Product = models.ForeignKey('products.Product', on_delete=models.CASCADE)
-    quantity: int = models.PositiveIntegerField(default=1)
+    objects: models.Manager = models.Manager()
+    user: models.ForeignKey[User | Combinable, User] = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
+    product: models.ForeignKey[Product | Combinable, Product] = models.ForeignKey(Product, on_delete=models.CASCADE)
+    quantity: models.PositiveIntegerField = models.PositiveIntegerField(default=1)
 
     class Meta:
         db_table: str = 'carts'

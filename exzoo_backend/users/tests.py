@@ -1,18 +1,18 @@
 from django.contrib.auth import get_user_model
-from django.contrib.auth.models import User
 from django.urls import reverse
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.test import APITestCase
 from rest_framework.authtoken.models import Token
 
+from users.models import User
+
 
 class UserTests(APITestCase):
     def setUp(self) -> None:
         """Setup for tests"""
-        user_model: User = get_user_model()
 
-        self.user: user_model = user_model.objects.create_user(
+        self.user: User = get_user_model().objects.create_user(
             username='user',
             email='exzoo_user@gmail.com',
             password=r'fdjknasdf7843dfFGYudfdsy'

@@ -79,7 +79,7 @@ class ProductTests(APITestCase):
         with transaction.atomic():
             Product.objects.select_for_update().filter(slug='fejhoa-kolumbiya').update(discount=10)
 
-        response: Response = self.client.get(path=url)
+        response = self.client.get(path=url)
 
         self.assertEqual(first=response.data['price'], second=2205.00)
 

@@ -1,5 +1,6 @@
 from decimal import Decimal
 
+from django.contrib.auth.models import AnonymousUser
 from django.db.models import QuerySet
 
 from carts.dataclasses import CartItemData
@@ -10,9 +11,12 @@ from users.models import User
 
 class CartService:
     @staticmethod
-    def get_cart_by_user(user: User) -> QuerySet[Cart]:
+    def get_cart_by_user(user: User | AnonymousUser) -> QuerySet[Cart]:
         """
         Get cart
+
+        Args:
+            user: User | AnonymousUser
 
         Returns:
             QuerySet[Cart]:
@@ -20,12 +24,12 @@ class CartService:
         return Cart.objects.select_related('product').filter(user=user)
 
     @staticmethod
-    def get_total_price_cart(user: User) -> Decimal:
+    def get_total_price_cart(user: User | AnonymousUser) -> Decimal:
         """
         Return total price of the cart
 
         Args:
-            user: User:
+            user: User | AnonymousUser
 
         Returns:
             Decimal: total price of the cart

@@ -1,4 +1,4 @@
-from typing import Tuple
+from typing import Tuple, Any
 
 from django.contrib import admin
 
@@ -6,7 +6,7 @@ from orders.models import OrderItem, Order
 
 
 class OrderItemInline(admin.TabularInline):
-    model: OrderItem = OrderItem
+    model: type[Any] = OrderItem
     extra: int = 1
 
 

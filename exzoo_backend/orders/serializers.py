@@ -14,7 +14,7 @@ from users.models import User
 class OrderItemSerializer(serializers.ModelSerializer):
 
     class Meta:
-        model: OrderItem = OrderItem
+        model: type[OrderItem] = OrderItem
         fields: Tuple = ('id', 'product', 'quantity')
 
     def to_representation(self, instance: OrderItem) -> dict:
@@ -36,10 +36,10 @@ class OrderItemSerializer(serializers.ModelSerializer):
 
 class OrderSerializer(serializers.ModelSerializer):
     items: OrderItemSerializer = OrderItemSerializer(many=True, read_only=True)
-    total_price_order: Decimal = serializers.SerializerMethodField()
+    total_price_order: serializers.SerializerMethodField = serializers.SerializerMethodField()
 
     class Meta:
-        model: Order = Order
+        model: type[Order] = Order
         fields: Tuple = ('id', 'user', 'status', 'created_at', 'items', 'total_price_order')
         read_only_fields: Tuple = ('user', 'status')
 

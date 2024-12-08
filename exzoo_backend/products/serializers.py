@@ -7,23 +7,23 @@ from products.models import Product, Category, Tag
 
 class CategorySerializer(ModelSerializer):
     class Meta:
-        model: Category = Category
+        model: type[Category] = Category
         fields: str = '__all__'
 
 
 class TagSerializer(ModelSerializer):
     class Meta:
-        model: Tag = Tag
+        model: type[Tag] = Tag
         fields: str = '__all__'
 
 
 class ProductSerializer(ModelSerializer):
     category: CategorySerializer = CategorySerializer(read_only=True)
     tags: TagSerializer = TagSerializer(many=True, read_only=True)
-    price: Decimal = serializers.SerializerMethodField()
+    price: serializers.SerializerMethodField = serializers.SerializerMethodField()
 
     class Meta:
-        model: Product = Product
+        model: type[Product] = Product
         fields: tuple = (
             'id',
             'name',

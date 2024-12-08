@@ -1,11 +1,12 @@
 import os
 from pathlib import Path
+from typing import Optional
 
 BASE_DIR: Path = Path(__file__).resolve().parent.parent
 
-SECRET_KEY: str = os.getenv('SECRET_KEY')
+SECRET_KEY: Optional[str] = os.getenv('SECRET_KEY')
 
-DEBUG: bool = eval(os.getenv('DEBUG'))
+DEBUG: bool = os.getenv('DEBUG') == 'True'
 
 ALLOWED_HOSTS: list[str] = [
     '127.0.0.1',
@@ -130,10 +131,10 @@ AUTH_USER_MODEL: str = 'users.User'
 EMAIL_HOST: str = 'smtp.gmail.com'
 EMAIL_PORT: int = 587
 EMAIL_USE_TLS: bool = True
-EMAIL_HOST_USER: str = os.getenv('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD: str = os.getenv('EMAIL_HOST_PASSWORD')
+EMAIL_HOST_USER: Optional[str] = os.getenv('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD: Optional[str] = os.getenv('EMAIL_HOST_PASSWORD')
 
-DOMAIN: str = os.getenv('DOMAIN')
+DOMAIN: Optional[str] = os.getenv('DOMAIN')
 SITE_NAME: str = 'Exzoo'
 
 DJOSER: dict = {

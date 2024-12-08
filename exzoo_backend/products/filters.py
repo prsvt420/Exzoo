@@ -17,5 +17,5 @@ class ProductFilter(filters.FilterSet):
     )
 
     class Meta:
-        model: Product = Product
+        model: type[Product] = Product
         fields: tuple = ('category', 'tags')

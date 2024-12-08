@@ -1,5 +1,4 @@
-from decimal import Decimal
-
+from django.contrib.auth.models import AnonymousUser
 from django.db.models import QuerySet
 
 from carts.models import Cart
@@ -9,16 +8,20 @@ from users.models import User
 
 class OrderService:
     @staticmethod
-    def get_user_orders(user: User) -> QuerySet[Order]:
+    def get_user_orders(user: User | AnonymousUser) -> QuerySet[Order]:
+
         """
         Get user orders
 
         Args:
-            user: User
+            user: User | AnonymousUser
 
         Returns:
             QuerySet[Order]:
         """
+
+        if isinstance(user, AnonymousUser):
+            return Order.objects.none()
 
         return Order.objects.filter(user=user).select_related('user')
 

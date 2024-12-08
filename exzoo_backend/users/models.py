@@ -3,4 +3,4 @@ from django.db import models
 
 
 class User(AbstractUser):
-    email: str = models.EmailField(unique=True)
+    email: models.EmailField = models.EmailField(unique=True)
