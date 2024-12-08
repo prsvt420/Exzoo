@@ -6,6 +6,8 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
+
+from orders.views import OrderViewSet
 from .yasg import urlpatterns as yasg_urls
 
 from products.views import *
@@ -17,6 +19,7 @@ api_router.register(prefix=r'products', viewset=ProductViewSet, basename='produc
 api_router.register(prefix=r'categories', viewset=CategoryViewSet, basename='categories')
 api_router.register(prefix=r'tags', viewset=TagViewSet, basename='tags')
 api_router.register(prefix=r'carts', viewset=CartViewSet, basename='carts')
+api_router.register(prefix=r'orders', viewset=OrderViewSet, basename='orders')
 
 urlpatterns: List[path] = [
     path('admin/', admin.site.urls),

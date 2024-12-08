@@ -87,6 +87,7 @@ class CartSerializer(serializers.ModelSerializer):
             'id': product.pk,
             'name': product.name,
             'price': product.price,
+            'slug': product.slug
         }
 
         return representation

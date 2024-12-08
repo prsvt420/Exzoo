@@ -63,3 +63,13 @@ class CartService:
             bool:
         """
         return Cart.objects.filter(user=user, product=product).exists()
+
+    @staticmethod
+    def clear_user_cart(user: User) -> None:
+        """
+        Clear user cart
+
+        Args:
+            user: User
+        """
+        [cart.delete() for cart in CartService.get_cart_by_user(user)]

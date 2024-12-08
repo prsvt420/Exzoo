@@ -26,6 +26,7 @@ class CartViewSet(viewsets.ModelViewSet):
 
     def list(self, request: Response, *args, **kwargs) -> Response:
         """
+        Get user cart
 
         Args:
             request: Response

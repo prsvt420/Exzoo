@@ -38,6 +38,7 @@ INSTALLED_APPS: list[str] = [
     'products',
     'users',
     'carts',
+    'orders',
 ]
 
 MIDDLEWARE: list[str] = [
