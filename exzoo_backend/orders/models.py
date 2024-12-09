@@ -34,7 +34,11 @@ class Order(models.Model):
 
 
 class OrderItem(models.Model):
-    order: models.ForeignKey[Order | Combinable, Order] = models.ForeignKey(Order, on_delete=models.CASCADE, related_name='items')
+    order: models.ForeignKey[Order | Combinable, Order] = models.ForeignKey(
+        Order,
+        on_delete=models.CASCADE,
+        related_name='items'
+    )
     product: models.ForeignKey[Product | Combinable, Product] = models.ForeignKey(Product, on_delete=models.CASCADE)
     quantity: models.PositiveIntegerField = models.PositiveIntegerField(default=1)
     price: models.DecimalField = models.DecimalField(max_digits=10, decimal_places=2)
@@ -46,4 +50,4 @@ class OrderItem(models.Model):
         verbose_name: str = 'order item'
 
     def __str__(self) -> str:
-        return f'order item'
+        return 'order item'

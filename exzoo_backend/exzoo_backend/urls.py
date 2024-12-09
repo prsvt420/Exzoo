@@ -9,7 +9,7 @@ from rest_framework.routers import DefaultRouter
 
 from carts.views import CartViewSet
 from orders.views import OrderViewSet
-from products.views import *
+from products.views import ProductViewSet, CategoryViewSet, TagViewSet
 from .yasg import urlpatterns as yasg_urls
 
 api_router: DefaultRouter = DefaultRouter()
